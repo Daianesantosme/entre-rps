@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://entrerps.com.br/sitemap.xml
