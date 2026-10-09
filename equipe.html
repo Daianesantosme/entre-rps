@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipe — ENTRE·RPs</title>
+<meta name="description" content="Quem trabalha com o atleta no Entre RPs: estratégia mental, treino, nutrição, sono, fisioterapia e suporte.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://entrerps.com.br/equipe.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --verde-entre:    #2C7351;
+  --verde-profundo: #0C361E;
+  --vermelho:       #A81218;
+  --vermelho-terra: #3B1410;
+  --dourado:        #D4A03A;
+  --dourado-texto:  #8A6414;
+  --areia:          #F5F1E8;
+  --terra:          #8B5E3C;
+  --branco:         #FFFFFF;
+  --texto-escuro:   #1a1a14;
+  --texto-medio:    #4a4a3a;
+  --texto-claro:    #7a7a6a;
+  --f-titulo: 'Outfit', sans-serif;
+  --f-corpo:  'DM Sans', sans-serif;
+  --f-mono:   'IBM Plex Mono', monospace;
+  --max: 1080px;
+  --px: clamp(1.4rem, 5vw, 4rem);
+  --py: clamp(4rem, 8vw, 7rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--f-corpo); color: var(--texto-escuro); background: var(--areia); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--branco); border-bottom: 1px solid #e5e0d5;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--px); height: 64px;
+}
+.nav-logo { font-family: var(--f-titulo); font-weight: 900; font-size: 1.15rem; color: var(--verde-entre); letter-spacing: 0.02em; }
+.nav-logo span { color: var(--dourado); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 0.88rem; color: var(--texto-medio); transition: color 0.2s; }
+.nav-links a:hover { color: var(--verde-entre); }
+.nav-cta {
+  background: var(--vermelho-terra); color: var(--branco);
+  font-family: var(--f-corpo); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 0.55rem 1.3rem; border-radius: 2px; transition: background 0.2s;
+}
+.nav-cta:hover { background: #2a0e0c; }
+
+/* WRAP */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--px); }
+
+/* BOTÕES */
+.btn {
+  display: inline-block; font-family: var(--f-corpo); font-weight: 700;
+  font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 0.9rem 1.8rem; border-radius: 2px; border: 2px solid transparent;
+  transition: all 0.18s; cursor: pointer;
+}
+.btn-dourado { background: var(--dourado); color: var(--verde-profundo); border-color: var(--dourado); }
+.btn-dourado:hover { background: #c49030; border-color: #c49030; }
+.btn-outline-branco { background: transparent; color: var(--branco); border-color: rgba(255,255,255,0.5); }
+.btn-outline-branco:hover { border-color: var(--branco); }
+
+/* EYEBROW */
+.eyebrow {
+  display: inline-block; font-family: var(--f-mono);
+  font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border-radius: 2px; margin-bottom: 1.4rem;
+}
+.eyebrow-areia { background: var(--dourado-texto); color: var(--areia); }
+.eyebrow-branco { background: rgba(255,255,255,0.15); color: var(--branco); border: 1px solid rgba(255,255,255,0.3); }
+
+/* HERO */
+.s-hero {
+  background: var(--vermelho-terra); color: var(--branco);
+  padding: clamp(5rem, 10vw, 9rem) var(--px) clamp(4rem, 8vw, 6rem);
+}
+.s-hero .eyebrow { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 0.16em; }
+.s-hero h1 {
+  font-family: var(--f-titulo); font-weight: 900;
+  font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.06;
+  max-width: 18ch; margin-bottom: 1.4rem;
+}
+.s-hero p { font-size: clamp(1rem, 1.6vw, 1.15rem); color: rgba(255,255,255,0.75); max-width: 44ch; line-height: 1.55; }
+
+/* QUEM — mesmo padrão da home */
+.s-quem { background: var(--areia); padding: var(--py) var(--px); }
+.s-quem h2 { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--texto-escuro); margin-bottom: 3rem; }
+.quem-pessoa { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-bottom: 5rem; }
+.quem-pessoa:last-child { margin-bottom: 0; }
+.quem-pessoa.inverso { direction: rtl; }
+.quem-pessoa.inverso > * { direction: ltr; }
+.quem-foto { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 2px; }
+.quem-foto-pendente {
+  display: flex; align-items: flex-end; padding: 1.2rem;
+  background: var(--verde-profundo); color: rgba(255,255,255,0.7);
+  font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.06em;
+}
+.quem-tag { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--vermelho); margin-bottom: 0.6rem; font-weight: 700; }
+.quem-pessoa h3 { font-family: var(--f-titulo); font-weight: 800; font-size: 1.5rem; color: var(--texto-escuro); margin-bottom: 0.4rem; }
+.quem-funcao { font-size: 0.9rem; color: var(--texto-claro); margin-bottom: 1.2rem; }
+.quem-pessoa p { font-size: 0.93rem; color: var(--texto-medio); line-height: 1.7; margin-bottom: 0.9rem; }
+.quem-pessoa p:last-child { margin-bottom: 0; }
+.quem-destaque { border-left: 3px solid var(--dourado-texto); padding-left: 1rem; margin-top: 1.2rem; }
+.quem-destaque p { font-size: 0.88rem; color: var(--texto-medio); font-style: italic; margin-bottom: 0; }
+.pendente { color: var(--vermelho); font-weight: 700; }
+
+/* RECOVERY */
+.s-recovery { background: var(--verde-entre); color: var(--branco); padding: 3.5rem var(--px); }
+.s-recovery h3 { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.1; }
+.s-recovery p { margin-top: 0.7rem; color: rgba(255,255,255,0.82); max-width: 56ch; }
+.recovery-itens { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.recovery-itens li { border-top: 2px solid var(--dourado); padding-top: 0.9rem; font-family: var(--f-titulo); font-weight: 800; font-size: 1.15rem; }
+@media (max-width: 820px) { .recovery-itens { grid-template-columns: 1fr; } }
+
+/* CTA */
+.s-cta { background: var(--vermelho-terra); color: var(--branco); padding: var(--py) var(--px); text-align: center; }
+.s-cta h2 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--branco); margin-bottom: 0.8rem; }
+.s-cta p { color: rgba(255,255,255,0.72); margin-bottom: 2.2rem; font-size: 0.97rem; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* FOOTER — igual à home */
+footer { background: var(--verde-profundo); padding: 2.4rem var(--px); }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--f-titulo); font-weight: 900; font-size: 0.95rem; color: var(--branco); }
+.footer-logo span { color: var(--dourado); }
+.footer-meta { font-family: var(--f-mono); font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.06em; }
+
+@media (max-width: 820px) {
+  .quem-pessoa, .quem-pessoa.inverso { grid-template-columns: 1fr; direction: ltr; gap: 2rem; }
+  .nav-links { display: none; }
+}
+@media (max-width: 560px) {
+  .cta-btns { flex-direction: column; }
+  .cta-btns .btn { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/">ENTRE<span>·</span>RPs</a>
+  <ul class="nav-links">
+    <li><a href="/#ecossistema">O Ecossistema</a></li>
+    <li><a href="/#pilares">Pilares</a></li>
+    <li><a href="/#diagnostico">Diagnóstico</a></li>
+  </ul>
+  <a href="https://payfast.greenn.com.br/53vb4fk/offer/4DX1cg" class="nav-cta" target="_blank" rel="noopener">Iniciar Diagnóstico</a>
+</nav>
+
+<!-- HERO -->
+<section class="s-hero">
+  <div class="wrap">
+    <span class="eyebrow">EQUIPE — ENTRE RPs</span>
+    <h1>Ninguém prepara o atleta sozinho. O que funciona é o conjunto.</h1>
+    <p>Cada profissional cuida de uma parte primordial da preparação deste atleta. A evolução vem da forma como essas partes se conectam.</p>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="s-quem">
+  <div class="wrap">
+    <h2>As pessoas por trás do método.</h2>
+
+    <!-- DAIANE -->
+    <div class="quem-pessoa">
+      <img class="quem-foto" src="equipe-fotos/daiane.png" alt="Daiane Santos correndo em prova de trail">
+      <div>
+        <p class="quem-tag">PERFORMANCE MENTAL</p>
+        <h3>Daiane Santos</h3>
+        <p class="quem-funcao">Mental estratégico · Sócia-fundadora</p>
+        <div class="quem-destaque">
+          <p>Sou ultra trail runner (50 km e mais). Falo de dentro da prova, não de fora.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PEDRO -->
+    <div class="quem-pessoa inverso">
+      <img class="quem-foto" src="equipe-fotos/pedro.png" alt="Pedro Damasceno correndo com camiseta Entre RPs">
+      <div>
+        <p class="quem-tag">SÓCIO · SUPORTE AO ATLETA</p>
+        <h3>Pedro Damasceno</h3>
+        <p class="quem-funcao">Sócio-fundador</p>
+      </div>
+    </div>
+
+    <!-- MARCIO -->
+    <div class="quem-pessoa">
+      <img class="quem-foto" src="equipe-fotos/marcio.png" alt="Marcio Souza, treinador do Entre RPs, em montanha">
+      <div>
+        <p class="quem-tag">TREINADOR</p>
+        <h3>Marcio Souza</h3>
+        <p class="quem-funcao">Treino, Escolhinha trail e Expedições</p>
+        <p class="pendente">[História de vida do Marcio — trecho a inserir a partir da gravação]</p>
+      </div>
+    </div>
+
+    <!-- LINALDO -->
+    <div class="quem-pessoa inverso">
+      <img class="quem-foto" src="equipe-fotos/linaldo.png" alt="Linaldo Nascimento, fisioterapeuta do Entre RPs">
+      <div>
+        <p class="quem-tag">FISIOTERAPIA</p>
+        <h3>Linaldo Nascimento</h3>
+        <p class="quem-funcao">Fisioterapeuta, quiropraxista e osteopata</p>
+      </div>
+    </div>
+
+    <!-- ERNESTO -->
+    <div class="quem-pessoa">
+      <img class="quem-foto" src="equipe-fotos/ernesto.png" alt="Ernesto Loureiro, odontologia do sono e miofuncional">
+      <div>
+        <p class="quem-tag">ODONTOLOGIA DO SONO E MIOFUNCIONAL</p>
+        <h3>Ernesto Loureiro</h3>
+      </div>
+    </div>
+
+    <!-- MOACIR -->
+    <div class="quem-pessoa inverso">
+      <img class="quem-foto" src="equipe-fotos/moacir.png" alt="Moacir Almeida, nutricionista esportivo do Entre RPs">
+      <div>
+        <p class="quem-tag">NUTRIÇÃO ESPORTIVA</p>
+        <h3>Moacir Almeida</h3>
+        <p class="quem-funcao">Nutricionista</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOVERY -->
+<section class="s-recovery">
+  <div class="wrap">
+    <span class="eyebrow eyebrow-branco">SAÚDE, BEM-ESTAR E RECOVERY</span>
+    <h3>Recuperação com estrutura, não improviso.</h3>
+    <p>O atleta do Entre RPs tem à disposição banheira de gelo, bota pneumática e massagem. A massagem é feita com agendamento prévio e também está presente nos eventos do calendário Entre RPs, para quem treina e compete com a recuperação no mesmo plano.</p>
+    <ul class="recovery-itens">
+      <li>Banheira de gelo</li>
+      <li>Bota pneumática</li>
+      <li>Massagem, com agendamento prévio ou nos eventos</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="s-cta">
+  <div class="wrap">
+    <span class="eyebrow eyebrow-branco">PRÓXIMO PASSO</span>
+    <h2>Se chegou até aqui, o próximo passo é simples.</h2>
+    <p>Não tem fórmula de qualificação automática. O Diagnóstico segue o método Entre RPs.</p>
+    <div class="cta-btns">
+      <a href="https://payfast.greenn.com.br/53vb4fk/offer/4DX1cg" class="btn btn-dourado" target="_blank" rel="noopener">Iniciar Diagnóstico</a>
+      <a href="https://wa.me/5521983530806" class="btn btn-outline-branco" target="_blank" rel="noopener">Falar Conosco</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">ENTRE<span>·</span>RPs</div>
+    <p class="footer-meta">© 2026 ENTRE RPs · RIO DE JANEIRO · DAIANE SANTOS + PEDRO DAMASCENO</p>
+  </div>
+</footer>
+
+</body>
+</html>
