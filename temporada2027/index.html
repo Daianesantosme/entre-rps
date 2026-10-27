@@ -103,6 +103,19 @@ h2{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem
 .servico{margin-top:1.3rem;padding-top:1.1rem;border-top:1px dashed var(--linha)}
 .servico h4{margin:0;font-family:var(--f-titulo);font-weight:800;font-size:1.1rem;color:var(--verde-profundo)}
 .pac-txt{color:rgba(255,255,255,.82);margin-top:1rem;max-width:56ch}
+.ficha{grid-template-columns:1fr}
+.invest{background:var(--branco)}
+.tabela{margin-top:2rem;border-top:2px solid var(--verde-profundo)}
+.linha{display:grid;grid-template-columns:1fr auto auto;gap:1rem 2rem;align-items:center;padding:1.3rem 0;border-bottom:1px solid var(--linha)}
+.linha h3{font-family:var(--f-titulo);font-weight:800;font-size:1.15rem;color:var(--verde-profundo)}
+.linha .det{color:var(--texto-claro);font-size:.9rem;margin-top:.2rem}
+.linha .val{display:grid;justify-items:end;gap:.15rem;min-width:150px}
+.linha .v{font-family:var(--f-mono);font-weight:700;font-size:1.5rem;color:var(--verde-profundo);font-variant-numeric:tabular-nums}
+.linha .u{font-size:.8rem;color:var(--texto-claro)}
+.linha .cod{font-family:var(--f-mono);font-size:.72rem;font-weight:700;background:var(--areia);color:var(--dourado-texto);padding:.2rem .5rem;border-radius:2px}
+.linha .de{font-family:var(--f-mono);font-size:.8rem;color:var(--texto-claro);text-decoration:line-through}
+.linha.destaque{background:var(--areia);padding-left:1rem;padding-right:1rem;margin-top:.6rem;border:1px solid var(--dourado)}
+@media (max-width:640px){.linha{grid-template-columns:1fr auto}.linha .btn{grid-column:1/-1}.linha .val{justify-items:start}}
 /* pacote */
 .pacote{background:var(--verde-profundo);color:var(--branco)}
 .pacote h2{color:var(--branco)}
@@ -218,9 +231,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
                 <li>Relatório escrito para você e para os profissionais que te acompanham</li>
               </ul>
             </div>
-            <div class="acao"><a class="btn btn-verde" data-product="Planejamento da Temporada 2027" href="#">Quero planejar minha temporada</a></div>
           </div>
-          <div class="preco"><div class="v">R$ 700</div><div class="u">2 sessões</div><span class="cod">R$ 525 com código</span></div>
         </article>
 
         <article class="ficha">
@@ -238,9 +249,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
                 <li>Fortalecimento específico para quem corre</li>
               </ul>
             </div>
-            <div class="acao"><a class="btn btn-verde" data-product="Fisioterapia para corredor (a domicílio)" href="#">Quero cuidar dessa dor</a></div>
           </div>
-          <div class="preco"><div class="v">R$ 400</div><div class="u">por sessão</div></div>
         </article>
 
         <article class="ficha">
@@ -258,9 +267,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
                 <li>Orientação sobre o tratamento indicado para o seu caso</li>
               </ul>
             </div>
-            <div class="acao"><a class="btn btn-verde" data-product="Avaliação do sono" href="#">Quero avaliar meu sono</a></div>
           </div>
-          <div class="preco"><div class="u">a partir de</div><div class="v">R$ 400</div></div>
         </article>
       </div>
     </div>
@@ -278,10 +285,48 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
           <li>Uma sessão de fisioterapia preventiva a domicílio</li>
         </ul>
       </div>
-      <div class="total">
-        <div class="de">R$ 1.500 separados</div>
-        <div class="por">R$ 1.290</div>
-        <a class="btn btn-dourado" data-product="Pacote Temporada 2027" href="#">Quero o pacote completo</a>
+      <div class="total"><a class="btn btn-dourado" href="#investimento">Ver investimento</a></div>
+    </div>
+  </section>
+
+  <section class="sec equipe">
+    <div class="wrap">
+      <span class="eyebrow">Quem conduz</span>
+      <h2>Três especialistas, um plano só.</h2>
+      <div class="equipe-grid">
+        <div class="pessoa"><img src="/equipe-fotos/daiane.png" alt="Daiane Santos"><h3>Daiane Santos</h3><p class="quem">Performance mental e estratégica</p><p>Especialista em Eneagrama e performance mental, com mais de 15 anos em liderança e estratégia. Corre trail.</p></div>
+        <div class="pessoa"><img src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento"><h3>Linaldo Nascimento</h3><p class="quem">Fisioterapia</p><p>Foco em prevenção e reabilitação para corredores. Mantém o atleta em movimento com segurança.</p></div>
+        <div class="pessoa"><img src="/equipe-fotos/ernesto.png" alt="Ernesto Loureiro"><h3>Ernesto Loureiro</h3><p class="quem">Odontologia do sono</p><p>Especialista em odontologia do sono e reabilitação miofuncional. Atua na respiração, na recuperação e no descanso.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec invest" id="investimento">
+    <div class="wrap">
+      <span class="eyebrow">Investimento</span>
+      <h2>Escolha por onde começar.</h2>
+      <p class="sub">Atendimento no Rio de Janeiro. Pagamento por Pix, combinado pelo WhatsApp.</p>
+      <div class="tabela">
+        <div class="linha">
+          <div><h3>Planejamento da Temporada 2027</h3><p class="det">Direção · 2 sessões de 40 a 60 minutos + relatório escrito</p></div>
+          <div class="val"><span class="v">R$ 700</span><span class="cod">R$ 525 com código</span></div>
+          <a class="btn btn-verde" data-product="Planejamento da Temporada 2027" href="#">Quero</a>
+        </div>
+        <div class="linha">
+          <div><h3>Fisioterapia para corredor</h3><p class="det">Corpo · por sessão, a domicílio</p></div>
+          <div class="val"><span class="v">R$ 400</span></div>
+          <a class="btn btn-verde" data-product="Fisioterapia para corredor (a domicílio)" href="#">Quero</a>
+        </div>
+        <div class="linha">
+          <div><h3>Avaliação do sono</h3><p class="det">Recuperação · exame feito em casa</p></div>
+          <div class="val"><span class="u">a partir de</span><span class="v">R$ 400</span></div>
+          <a class="btn btn-verde" data-product="Avaliação do sono" href="#">Quero</a>
+        </div>
+        <div class="linha destaque">
+          <div><h3>Pacote Temporada 2027</h3><p class="det">Conexão · Planejamento + avaliação do sono + 1 sessão de fisioterapia preventiva</p></div>
+          <div class="val"><span class="de">R$ 1.500 separados</span><span class="v">R$ 1.290</span></div>
+          <a class="btn btn-dourado" data-product="Pacote Temporada 2027" href="#">Quero</a>
+        </div>
       </div>
     </div>
   </section>
@@ -306,18 +351,6 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
         <button class="btn btn-verde" type="submit">Falar no WhatsApp</button>
         <p class="nota">O código é conferido na conversa. Sem código, fale com a gente do mesmo jeito.</p>
       </form>
-    </div>
-  </section>
-
-  <section class="sec equipe">
-    <div class="wrap">
-      <span class="eyebrow">Quem conduz</span>
-      <h2>Três especialistas, um plano só.</h2>
-      <div class="equipe-grid">
-        <div class="pessoa"><img src="/equipe-fotos/daiane.png" alt="Daiane Santos"><h3>Daiane Santos</h3><p class="quem">Performance mental e estratégica</p><p>Especialista em Eneagrama e performance mental, com mais de 15 anos em liderança e estratégia. Corre trail.</p></div>
-        <div class="pessoa"><img src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento"><h3>Linaldo Nascimento</h3><p class="quem">Fisioterapia</p><p>Foco em prevenção e reabilitação para corredores. Mantém o atleta em movimento com segurança.</p></div>
-        <div class="pessoa"><img src="/equipe-fotos/ernesto.png" alt="Ernesto Loureiro"><h3>Ernesto Loureiro</h3><p class="quem">Odontologia do sono</p><p>Especialista em odontologia do sono e reabilitação miofuncional. Atua na respiração, na recuperação e no descanso.</p></div>
-      </div>
     </div>
   </section>
 
