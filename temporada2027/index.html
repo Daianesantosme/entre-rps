@@ -123,6 +123,27 @@ h2{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem
 .prof-nome{font-family:var(--f-titulo);font-weight:800;font-size:1.1rem;color:var(--texto-escuro);margin-top:.1rem}
 .prof .quem{margin-top:.15rem}
 .bio{color:var(--texto-medio);font-size:.93rem;margin-top:.4rem;max-width:54ch}
+.bloco{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--linha)}
+.bloco.inverso{grid-template-columns:1.2fr 1fr}
+.bloco.inverso .bloco-foto{order:2}
+.bloco-foto{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:top center;border-radius:2px;background:var(--branco);position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
+.bloco-txt{min-width:0}
+.bloco-txt>p{color:var(--texto-medio);margin-top:.9rem;max-width:62ch}
+.bloco h3{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15;color:var(--verde-profundo)}
+.bloco .desejo{color:var(--verde-entre);font-weight:700}
+.quem-box{margin-top:1.8rem;padding:1.4rem;background:var(--branco);border:1px solid var(--linha);border-radius:2px}
+.quem-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vermelho);font-weight:700}
+.quem-box h4,.como h4{margin:.4rem 0 0;font-family:var(--f-titulo);font-weight:800;font-size:1.2rem;color:var(--texto-escuro)}
+.quem-box .funcao{font-size:.9rem;color:var(--texto-claro);margin-top:.2rem}
+.quem-box p{color:var(--texto-medio);font-size:.95rem;margin-top:.6rem}
+.quem-box .destaque{border-left:3px solid var(--dourado-texto);padding-left:1rem;font-style:italic;margin-top:1rem}
+.como{margin-top:1.8rem}
+.como h4{color:var(--verde-profundo)}
+.como ol{margin:.9rem 0 0;padding-left:1.2rem;color:var(--texto-medio);display:grid;gap:.5rem}
+.como strong{color:var(--texto-escuro)}
+.porque{margin-top:1.1rem;padding:1rem 1.2rem;background:var(--verde-profundo);color:rgba(255,255,255,.88);border-radius:2px;font-size:.95rem}
+.porque strong{color:var(--dourado)}
+@media (max-width:820px){.bloco,.bloco.inverso{grid-template-columns:1fr;gap:1.6rem}.bloco.inverso .bloco-foto{order:0}.bloco-foto{position:static;max-width:420px}}
 /* pacote */
 .pacote{background:var(--verde-profundo);color:var(--branco)}
 .pacote h2{color:var(--branco)}
@@ -221,62 +242,90 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
       <h2>Entre um RP e o próximo, quase todo mundo trava em um destes três lugares.</h2>
       <p class="sub">Informação sobre corrida sobra. O que falta para o amador competitivo é direção: saber para onde vai, chegar inteiro e recuperar o treino que já faz. Comece pelo ponto que mais pesa para você hoje.</p>
 
-      <div class="fichas">
-        <article class="ficha">
-          <div>
-            <p class="pilar">Direção</p>
-            <h3>Você treina muito e ainda não sabe para qual prova está treinando.</h3>
-            <p class="desc">O calendário foi montado pelo que todo mundo está correndo. A prova-alvo foi escolhida no impulso. Cada semana tem um treino, mas o ano não tem um plano. E quando a largada chega, você descobre no meio da prova o que deveria ter decidido em janeiro.</p>
-            <p class="desejo">O que muda: você chega à prova-alvo no auge, sabendo onde acelerar, onde segurar e por que está treinando cada semana.</p>
-            <div class="servico">
-              <div class="prof"><img src="/equipe-fotos/daiane.png" alt="Daiane Santos"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Daiane Santos</p><p class="quem">Performance mental e estratégica</p><p class="bio">Especialista em Eneagrama e performance mental, com mais de 15 anos em liderança e estratégia. Corre trail e conhece por dentro a diferença entre treinar muito e treinar com direção.</p></div></div>
-              <h4>Planejamento da Temporada 2027</h4>
-              <ul>
-                <li>Duas sessões de 40 a 60 minutos: entrevista e devolutiva</li>
-                <li>Leitura do seu perfil comportamental e de como ele pesa na prova</li>
-                <li>Metas, calendário de provas e estratégia para a temporada</li>
-                <li>Relatório escrito para você e para os profissionais que te acompanham</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+      <article class="bloco">
+        <img class="bloco-foto" src="/equipe-fotos/daiane.png" alt="Daiane Santos, performance mental e estratégica do Entre RPs">
+        <div class="bloco-txt">
+          <p class="pilar">Direção</p>
+          <h3>Você treina muito e ainda não sabe para qual prova está treinando.</h3>
+          <p>O calendário foi montado pelo que todo mundo está correndo. A prova-alvo foi escolhida no impulso. Cada semana tem um treino, mas o ano não tem um plano. E quando a largada chega, você descobre no meio da prova o que deveria ter decidido em janeiro.</p>
+          <p class="desejo">O que muda: você chega à prova-alvo no auge, sabendo onde acelerar, onde segurar e por que está treinando cada semana.</p>
 
-        <article class="ficha">
-          <div>
-            <p class="pilar">Corpo</p>
-            <h3>A dor que você está empurrando com a barriga.</h3>
-            <p class="desc">Aquele incômodo no joelho, na canela ou no quadril que some no aquecimento e volta depois do longão. Você segue treinando com medo de parar e perder o ciclo. A maioria dos corredores só procura um fisioterapeuta depois que a lesão já tirou semanas de treino.</p>
-            <p class="desejo">O que muda: você treina sem medo, entende o que o seu corpo está pedindo e chega inteiro à largada.</p>
-            <div class="servico">
-              <div class="prof"><img src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Linaldo Nascimento</p><p class="quem">Fisioterapeuta</p><p class="bio">Foco em prevenção e reabilitação para corredores. Mantém o atleta em movimento com segurança.</p></div></div>
-              <h4>Fisioterapia para corredor, a domicílio</h4>
-              <ul>
-                <li>Atendimento no seu endereço, no seu horário</li>
-                <li>Prevenção, tratamento e retorno à corrida depois de lesão</li>
-                <li>Fortalecimento específico para quem corre</li>
-              </ul>
-            </div>
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Performance mental e estratégica</p>
+            <h4>Daiane Santos</h4>
+            <p>Responsável pela estratégia do atleta de ponta a ponta: escolha da prova, montagem da rotina, leitura do atleta como um todo e estratégia de prova.</p>
+            <p>O treinamento mental passa pelo perfil de personalidade. O Eneagrama entra como ferramenta de autoconhecimento aplicado: cada perfil reage de um jeito ao platô, à prova que não sai como planejado e à pressão.</p>
+            <p class="destaque">Ultra trail runner, em provas de 50 km ou mais. Fala de dentro da prova, não de fora.</p>
           </div>
-        </article>
 
-        <article class="ficha">
-          <div>
-            <p class="pilar">Corpo · Recuperação</p>
-            <h3>Você treina bem e acorda cansado.</h3>
-            <p class="desc">A planilha está em dia, mas o treino rende menos do que deveria. O cansaço se acumula de uma semana para a outra, e talvez alguém já tenha comentado que você ronca. A adaptação ao treino acontece enquanto você dorme. Quando o sono falha, parte do treino se perde.</p>
-            <p class="desejo">O que muda: você acorda recuperado e passa a aproveitar o treino que já faz.</p>
-            <div class="servico">
-              <div class="prof"><img src="/equipe-fotos/ernesto.png" alt="Dr. Ernesto Loureiro"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Dr. Ernesto Loureiro</p><p class="quem">Odontologia do sono</p><p class="bio">Especialista em odontologia do sono e reabilitação miofuncional. Atua na qualidade da respiração, na recuperação e no descanso.</p></div></div>
-              <h4>Avaliação do sono</h4>
-              <ul>
-                <li>Exame feito em casa, durante a sua noite de sono</li>
-                <li>Análise da respiração e da qualidade do descanso</li>
-                <li>Orientação sobre o tratamento indicado para o seu caso</li>
-              </ul>
-            </div>
+          <div class="como">
+            <h4>Planejamento da Temporada 2027: como funciona</h4>
+            <ol>
+              <li><strong>Entrevista (40 a 60 min).</strong> Seu histórico, suas metas, sua rotina e como você toma decisões quando a prova aperta.</li>
+              <li><strong>Leitura do perfil.</strong> Como o seu jeito de ser aparece no treino e na prova: onde você tende a acelerar demais, a desistir cedo ou a se cobrar além da conta.</li>
+              <li><strong>Devolutiva (40 a 60 min).</strong> Provas-alvo e provas de preparação, períodos de base, pontos de atenção e estratégia para cada prova importante.</li>
+              <li><strong>Relatório escrito</strong> para você e para os profissionais que te acompanham, para que todos trabalhem na mesma direção.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> treino bem feito em direção errada vira cansaço. O planejamento define para onde vai cada semana de esforço, e a leitura do perfil prepara você para as decisões que nenhuma planilha toma por você no meio da prova.</p>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+
+      <article class="bloco inverso">
+        <img class="bloco-foto" src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento, fisioterapeuta do Entre RPs">
+        <div class="bloco-txt">
+          <p class="pilar">Corpo</p>
+          <h3>A dor que você está empurrando com a barriga.</h3>
+          <p>Aquele incômodo no joelho, na canela ou no quadril que some no aquecimento e volta depois do longão. Você segue treinando com medo de parar e perder o ciclo, até o dia em que o corpo decide por você.</p>
+          <p class="desejo">O que muda: você treina sem medo, entende o que o seu corpo está pedindo e chega inteiro à largada.</p>
+
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Fisioterapia</p>
+            <h4>Linaldo Nascimento</h4>
+            <p class="funcao">Fisioterapeuta, quiropraxista e osteopata</p>
+            <p>Formação inicial em preparação física. Entende a fisiologia do esporte e trabalha em três frentes: prevenção, reabilitação e fortalecimento.</p>
+            <p>A direção dele evita a lesão e sustenta o rendimento dentro de segurança e saúde.</p>
+          </div>
+
+          <div class="como">
+            <h4>Fisioterapia para corredor, a domicílio: como funciona</h4>
+            <ol>
+              <li><strong>Atendimento no seu endereço</strong>, no horário combinado.</li>
+              <li><strong>Avaliação</strong> do seu histórico de dores e lesões e do que está incomodando agora.</li>
+              <li><strong>Tratamento e prevenção</strong> com foco em corrida, para tratar a dor e evitar que ela volte.</li>
+              <li><strong>Fortalecimento específico para corredor</strong>, para o corpo aguentar a carga que o seu plano pede.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> uma lesão tira semanas de treino e pode tirar a prova-alvo do ano. Cuidar do incômodo enquanto ele ainda é pequeno custa muito menos do que recomeçar depois.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bloco">
+        <img class="bloco-foto" src="/equipe-fotos/ernesto.png" alt="Ernesto Loureiro, odontologia do sono e miofuncional">
+        <div class="bloco-txt">
+          <p class="pilar">Corpo · Recuperação</p>
+          <h3>Você treina bem e acorda cansado.</h3>
+          <p>A planilha está em dia, mas o treino rende menos do que deveria. O cansaço se acumula de uma semana para a outra, e talvez alguém já tenha comentado que você ronca. A adaptação ao treino acontece enquanto você dorme. Quando o sono falha, parte do treino se perde.</p>
+          <p class="desejo">O que muda: você acorda recuperado e passa a aproveitar o treino que já faz.</p>
+
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Odontologia do sono e miofuncional</p>
+            <h4>Dr. Ernesto Loureiro</h4>
+            <p>Cuida da respiração do atleta, que sustenta performance e saúde. Respiração eficiente melhora o sono, a recuperação e o rendimento na prova.</p>
+            <p>Trabalha a musculatura e a função orofacial que sustentam uma respiração boa.</p>
+          </div>
+
+          <div class="como">
+            <h4>Avaliação do sono: como funciona</h4>
+            <ol>
+              <li><strong>Exame do sono feito em casa</strong>, durante a sua noite de sono.</li>
+              <li><strong>Análise dos resultados</strong>: como você respira e como o seu descanso acontece ao longo da noite.</li>
+              <li><strong>Orientação</strong> sobre o tratamento indicado para o seu caso, quando necessário.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> o exame mostra em que condição você está antes de competir. Competir com segurança começa pela respiração e pelo descanso.</p>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -304,7 +353,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
       <div class="tabela">
         <div class="linha">
           <div><h3>Planejamento da Temporada 2027</h3><p class="det">Direção · 2 sessões de 40 a 60 minutos + relatório escrito</p></div>
-          <div class="val"><span class="v">R$ 700</span><span class="cod">R$ 525 com código</span></div>
+          <div class="val"><span class="v">R$ 700</span><span class="cod">Condição exclusiva com código</span></div>
           <a class="btn btn-verde" data-product="Planejamento da Temporada 2027" href="#">Quero</a>
         </div>
         <div class="linha">
@@ -331,7 +380,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
       <div>
         <span class="eyebrow">Assessorias parceiras</span>
         <h2>Treina em assessoria parceira?</h2>
-        <p class="sub">Use o código da sua assessoria: o Planejamento da Temporada sai por R$ 525 e você tem condição exclusiva nos demais serviços. Peça o código ao seu treinador.</p>
+        <p class="sub">Atletas de assessorias parceiras têm condição exclusiva em todos os serviços. Peça o código ao seu treinador e informe na conversa.</p>
       </div>
       <form class="form" id="f" novalidate>
         <label for="prod">Serviço</label>
