@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Temporada 2027 · Entre RPs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Planejamento da Temporada 2027, fisioterapia para corredor a domicílio e avaliação do sono. Entre RPs, Rio de Janeiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: segue o site entrerps.com.br — hero vermelho-terra, régua da temporada, serviços em fichas, pacote em verde profundo, código de parceiro, equipe, CTA final. Paleta e fontes oficiais do site; tema único (claro), como o site. */
+:root{
+  --verde-entre:#2C7351;
+  --verde-profundo:#0C361E;
+  --vermelho:#A81218;
+  --vermelho-terra:#3B1410;
+  --dourado:#D4A03A;
+  --dourado-texto:#8A6414;
+  --areia:#F5F1E8;
+  --terra:#8B5E3C;
+  --branco:#FFFFFF;
+  --texto-escuro:#1a1a14;
+  --texto-medio:#4a4a3a;
+  --texto-claro:#7a7a6a;
+  --linha:#e5e0d5;
+  --f-titulo:'Outfit',system-ui,sans-serif;
+  --f-corpo:'DM Sans',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --max:1080px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{font-family:var(--f-corpo);color:var(--texto-escuro);background:var(--areia);line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+h1,h2,h3{margin:0;text-wrap:balance}
+:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.sec{padding-block:clamp(3.5rem,8vw,6rem)}
+
+/* nav */
+nav{background:var(--branco);border-bottom:1px solid var(--linha);position:sticky;top:env(safe-area-inset-top,0px);z-index:50}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--branco)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.nav-logo{font-family:var(--f-titulo);font-weight:900;font-size:1.15rem;color:var(--verde-entre);letter-spacing:.02em;white-space:nowrap}
+.nav-logo span{color:var(--dourado)}
+.nav-cta{background:var(--vermelho-terra);color:var(--branco);font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding:.55rem 1.1rem;border-radius:2px;white-space:nowrap}
+
+/* botões e etiquetas (padrão do site) */
+.btn{display:inline-block;font-family:var(--f-corpo);font-weight:700;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;padding:.9rem 1.6rem;border-radius:2px;border:2px solid transparent;cursor:pointer;text-align:center}
+.btn-dourado{background:var(--dourado);color:var(--verde-profundo);border-color:var(--dourado)}
+.btn-dourado:hover{background:#c49030;border-color:#c49030}
+.btn-outline-branco{background:transparent;color:var(--branco);border-color:rgba(255,255,255,.5)}
+.btn-outline-branco:hover{border-color:var(--branco)}
+.btn-verde{background:var(--verde-entre);color:var(--branco);border-color:var(--verde-entre)}
+.btn-verde:hover{background:var(--verde-profundo);border-color:var(--verde-profundo)}
+.eyebrow{display:inline-block;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .8rem;border-radius:2px;margin-bottom:1.2rem;background:var(--dourado-texto);color:var(--areia)}
+.eyebrow-clara{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.2)}
+h2{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.12;color:var(--verde-profundo)}
+.sub{color:var(--texto-medio);max-width:60ch;margin-top:.8rem}
+
+/* hero */
+.hero{background:var(--vermelho-terra);color:var(--branco);padding-block:clamp(4rem,9vw,7rem)}
+.hero h1{font-family:var(--f-titulo);font-weight:900;font-size:clamp(2.5rem,6vw,4.2rem);line-height:1.06;max-width:16ch}
+.hero h1 span{color:var(--dourado)}
+.hero p.lead{color:rgba(255,255,255,.78);max-width:48ch;margin-top:1.3rem;font-size:clamp(1rem,1.6vw,1.12rem)}
+.ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+
+/* régua da temporada */
+.temporada{background:var(--branco);border-bottom:1px solid var(--linha);padding-block:2rem}
+.temporada-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline;margin-bottom:1rem}
+.rp{font-family:var(--f-titulo);font-weight:900;color:var(--verde-profundo);letter-spacing:.04em}
+.rp i{font-style:normal;color:var(--dourado);letter-spacing:.3em;margin:0 .4em}
+.legenda{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--texto-claro)}
+.regua-scroll{overflow-x:auto}
+.regua{display:grid;grid-template-columns:repeat(13,minmax(54px,1fr));min-width:720px;font-family:var(--f-mono);font-size:.74rem}
+.regua div{border-left:1px solid var(--linha);padding:.6rem .4rem 0;color:var(--texto-claro);position:relative}
+.regua div::before{content:"";position:absolute;left:-1px;top:0;width:2px;height:10px;background:var(--texto-medio)}
+.regua .agora{color:var(--verde-entre);font-weight:700}
+.regua .agora::after{content:"planejar";display:block;margin-top:.3rem;font-weight:400}
+.regua .base::after{content:"base";display:block;margin-top:.3rem}
+.regua .prova{color:var(--texto-medio)}
+.regua .prova::after{content:"• prova-alvo";display:block;margin-top:.3rem;color:var(--vermelho)}
+
+/* serviços */
+.fichas{display:grid;gap:1.1rem;margin-top:2.2rem}
+.ficha{background:var(--branco);border:1px solid var(--linha);border-radius:2px;display:grid;grid-template-columns:1fr auto;gap:1.5rem 2rem;padding:1.8rem}
+.ficha h3{font-family:var(--f-titulo);font-weight:800;font-size:1.4rem;color:var(--verde-profundo)}
+.quem{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--vermelho);font-weight:700;margin-top:.4rem}
+.ficha p.desc{margin-top:.8rem;max-width:58ch;color:var(--texto-medio)}
+.ficha ul{margin:.7rem 0 0;padding-left:1.1rem;color:var(--texto-medio)}
+.ficha .acao{margin-top:1.2rem}
+.preco{text-align:right;min-width:150px}
+.preco .v{font-family:var(--f-mono);font-size:1.8rem;font-weight:700;color:var(--verde-profundo);line-height:1.1;font-variant-numeric:tabular-nums}
+.preco .u{font-size:.85rem;color:var(--texto-claro)}
+.preco .cod{display:inline-block;margin-top:.7rem;font-family:var(--f-mono);font-size:.74rem;font-weight:700;background:var(--areia);color:var(--dourado-texto);padding:.3rem .6rem;border-radius:2px}
+
+.pilar{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado-texto);font-weight:700;margin-bottom:.5rem}
+.ficha h3{font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.2}
+.desejo{margin-top:.9rem;font-weight:700;color:var(--verde-entre);max-width:58ch}
+.servico{margin-top:1.3rem;padding-top:1.1rem;border-top:1px dashed var(--linha)}
+.servico h4{margin:0;font-family:var(--f-titulo);font-weight:800;font-size:1.1rem;color:var(--verde-profundo)}
+.pac-txt{color:rgba(255,255,255,.82);margin-top:1rem;max-width:56ch}
+.ficha{grid-template-columns:1fr}
+.invest{background:var(--branco)}
+.tabela{margin-top:2rem;border-top:2px solid var(--verde-profundo)}
+.linha{display:grid;grid-template-columns:1fr auto auto;gap:1rem 2rem;align-items:center;padding:1.3rem 0;border-bottom:1px solid var(--linha)}
+.linha h3{font-family:var(--f-titulo);font-weight:800;font-size:1.15rem;color:var(--verde-profundo)}
+.linha .det{color:var(--texto-claro);font-size:.9rem;margin-top:.2rem}
+.linha .val{display:grid;justify-items:end;gap:.15rem;min-width:150px}
+.linha .v{font-family:var(--f-mono);font-weight:700;font-size:1.5rem;color:var(--verde-profundo);font-variant-numeric:tabular-nums}
+.linha .u{font-size:.8rem;color:var(--texto-claro)}
+.linha .cod{font-family:var(--f-mono);font-size:.72rem;font-weight:700;background:var(--areia);color:var(--dourado-texto);padding:.2rem .5rem;border-radius:2px}
+.linha .de{font-family:var(--f-mono);font-size:.8rem;color:var(--texto-claro);text-decoration:line-through}
+.linha.destaque{background:var(--areia);padding-left:1rem;padding-right:1rem;margin-top:.6rem;border:1px solid var(--dourado)}
+@media (max-width:640px){.linha{grid-template-columns:1fr auto}.linha .btn{grid-column:1/-1}.linha .val{justify-items:start}}
+.prof{display:grid;grid-template-columns:200px 1fr;gap:1.5rem;align-items:center;margin-bottom:1.3rem}
+.prof img{width:200px;aspect-ratio:4/5;object-fit:cover;object-position:top center;border-radius:2px;background:var(--areia)}
+@media (max-width:640px){.prof{grid-template-columns:1fr}.prof img{width:100%;max-width:320px}}
+.prof-label{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-claro)}
+.prof-nome{font-family:var(--f-titulo);font-weight:800;font-size:1.1rem;color:var(--texto-escuro);margin-top:.1rem}
+.prof .quem{margin-top:.15rem}
+.bio{color:var(--texto-medio);font-size:.93rem;margin-top:.4rem;max-width:54ch}
+.bloco{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--linha)}
+.bloco.inverso{grid-template-columns:1.2fr 1fr}
+.bloco.inverso .bloco-foto{order:2}
+.bloco-foto{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;border-radius:2px;background:var(--branco);position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
+.bloco-txt{min-width:0}
+.bloco-txt>p{color:var(--texto-medio);margin-top:.9rem;max-width:62ch}
+.bloco h3{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15;color:var(--verde-profundo)}
+.bloco .desejo{color:var(--verde-entre);font-weight:700}
+.quem-box{margin-top:1.8rem;padding:1.4rem;background:var(--branco);border:1px solid var(--linha);border-radius:2px}
+.quem-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vermelho);font-weight:700}
+.quem-box h4,.como h4{margin:.4rem 0 0;font-family:var(--f-titulo);font-weight:800;font-size:1.2rem;color:var(--texto-escuro)}
+.quem-box .funcao{font-size:.9rem;color:var(--texto-claro);margin-top:.2rem}
+.quem-box p{color:var(--texto-medio);font-size:.95rem;margin-top:.6rem}
+.quem-box .destaque{border-left:3px solid var(--dourado-texto);padding-left:1rem;font-style:italic;margin-top:1rem}
+.como{margin-top:1.8rem}
+.como h4{color:var(--verde-profundo)}
+.como ol{margin:.9rem 0 0;padding-left:1.2rem;color:var(--texto-medio);display:grid;gap:.5rem}
+.como strong{color:var(--texto-escuro)}
+.porque{margin-top:1.1rem;padding:1rem 1.2rem;background:var(--verde-profundo);color:rgba(255,255,255,.88);border-radius:2px;font-size:.95rem}
+.porque strong{color:var(--dourado)}
+@media (max-width:820px){.bloco,.bloco.inverso{grid-template-columns:1fr;gap:1.6rem}.bloco.inverso .bloco-foto{order:0}.bloco-foto{position:static;max-width:420px}}
+.tl-titulo{font-family:var(--f-titulo);font-weight:800;color:var(--verde-profundo);font-size:1.1rem;margin-top:.3rem}
+.tag-ilus{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado-texto);border:1px dashed var(--dourado-texto);padding:.25rem .6rem;border-radius:2px}
+.regua [data-f]::after{content:attr(data-f);display:block;margin-top:.3rem;color:var(--texto-medio)}
+.regua .f-plan{color:var(--verde-entre);font-weight:700}
+.regua .f-plan::after{color:var(--verde-entre)}
+.regua .f-prova::after{content:"• " attr(data-f);color:var(--vermelho);font-weight:700}
+.tl-nota{margin-top:1rem;font-size:.88rem;color:var(--texto-claro);max-width:72ch}
+.eneagrama{margin-top:1.8rem;padding:1.4rem;border:1px solid var(--dourado);background:var(--branco);border-radius:2px}
+.eneagrama h4,.ganha h4{margin:0;font-family:var(--f-titulo);font-weight:800;font-size:1.2rem;color:var(--verde-profundo)}
+.eneagrama p{color:var(--texto-medio);font-size:.95rem;margin-top:.7rem}
+.perfis{margin:.9rem 0 0;padding:0;display:grid;gap:.6rem;list-style:none}
+.perfis li{padding-left:1rem;border-left:3px solid var(--verde-entre);color:var(--texto-medio);font-size:.95rem}
+.perfis strong{color:var(--texto-escuro)}
+.ganha{margin-top:1.8rem}
+.ganha ul{margin:.8rem 0 0;padding-left:1.2rem;color:var(--texto-medio);display:grid;gap:.4rem}
+/* pacote */
+.pacote{background:var(--verde-profundo);color:var(--branco)}
+.pacote h2{color:var(--branco)}
+.pacote-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:end}
+.pacote ul{margin:1.2rem 0 0;padding-left:1.1rem;color:rgba(255,255,255,.82)}
+.pacote .total{text-align:right}
+.pacote .de{font-family:var(--f-mono);font-size:.9rem;color:rgba(255,255,255,.55);text-decoration:line-through}
+.pacote .por{font-family:var(--f-mono);font-weight:700;font-size:clamp(2.4rem,5vw,3.2rem);color:var(--dourado);line-height:1.1}
+.pacote .btn{margin-top:1.2rem}
+
+/* código */
+.codigo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:center}
+.form{background:var(--branco);border:1px solid var(--linha);border-radius:2px;padding:1.6rem;display:grid;gap:.8rem}
+label{font-weight:700;font-size:.9rem;color:var(--verde-profundo)}
+select,input{font:inherit;padding:.75rem .9rem;border-radius:2px;border:1.5px solid var(--linha);background:var(--areia);color:var(--texto-escuro);width:100%}
+input{font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.06em}
+.nota{font-size:.82rem;color:var(--texto-claro)}
+
+/* equipe */
+.equipe{background:var(--branco)}
+.equipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.2rem}
+.pessoa{display:grid;gap:.6rem;align-content:start}
+.pessoa img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:top center;border-radius:2px;background:var(--areia)}
+.pessoa h3{font-family:var(--f-titulo);font-weight:800;font-size:1.25rem;color:var(--texto-escuro)}
+.pessoa p{color:var(--texto-medio);font-size:.95rem}
+
+/* passos */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin:2rem 0 0;padding:0;counter-reset:p}
+.passos li{list-style:none;counter-increment:p;border-top:2px solid var(--verde-entre);padding-top:1rem}
+.passos li::before{content:"0" counter(p);display:block;font-family:var(--f-mono);font-weight:700;color:var(--dourado-texto);font-size:.8rem;margin-bottom:.4rem}
+.passos strong{font-family:var(--f-titulo);font-size:1.1rem;color:var(--verde-profundo)}
+.passos span{display:block;color:var(--texto-medio);font-size:.95rem;margin-top:.3rem}
+
+/* cta final e rodapé */
+.final{background:var(--vermelho-terra);color:var(--branco);text-align:center}
+.final h2{color:var(--branco);font-weight:900}
+.final p{color:rgba(255,255,255,.72);margin:.8rem auto 0;max-width:50ch}
+.final .ctas{justify-content:center}
+footer{background:var(--branco);border-top:1px solid var(--linha);padding-block:2.2rem}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem}
+.foot-logo{font-family:var(--f-titulo);font-weight:900;color:var(--verde-entre)}
+.foot-logo span{color:var(--dourado)}
+.foot-meta{font-family:var(--f-mono);font-size:.72rem;color:var(--texto-claro);letter-spacing:.06em}
+
+@media (max-width:820px){
+  .ficha{grid-template-columns:1fr}
+  .preco{text-align:left}
+  .pacote-grid,.codigo-grid{grid-template-columns:1fr}
+  .pacote .total{text-align:left}
+  .equipe-grid,.passos{grid-template-columns:1fr}
+  .pessoa img{max-width:220px}
+}
+@media (max-width:560px){ .ctas{flex-direction:column} .nav-cta{display:none} }
+@media (prefers-reduced-motion:no-preference){.btn{transition:all .18s}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="https://entrerps.com.br">ENTRE<span>·</span>RPs</a>
+    <a class="nav-cta" href="#servicos">Temporada 2027</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow eyebrow-clara">Temporada 2027 — Rio de Janeiro</span>
+      <h1>2027 começa <span>antes</span> da primeira largada.</h1>
+      <p class="lead">Corpo preparado, cabeça no lugar e um plano para o ano inteiro. Escolha o que você precisa agora: planejamento da temporada, fisioterapia para corredor ou avaliação do sono.</p>
+      <div class="ctas">
+        <a class="btn btn-dourado" href="#servicos">Ver serviços</a>
+        <a class="btn btn-outline-branco" href="#codigo">Tenho código de parceiro</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="temporada">
+    <div class="wrap">
+      <div class="temporada-top">
+        <div>
+          <span class="rp">RP<i>•••</i>RP</span>
+          <p class="tl-titulo">Como uma temporada de amador competitivo costuma se organizar</p>
+        </div>
+        <span class="tag-ilus">Exemplo ilustrativo</span>
+      </div>
+      <div class="regua-scroll">
+        <div class="regua" aria-label="Exemplo ilustrativo de temporada">
+          <div class="f-plan" data-f="Planejar">nov/26</div><div class="f-plan" data-f="Planejar">dez/26</div><div data-f="Base">jan/27</div><div data-f="Base">fev/27</div><div data-f="Construção">mar/27</div><div class="f-prova" data-f="Prova-alvo">abr/27</div><div data-f="Recuperar">mai/27</div><div data-f="Construção">jun/27</div><div data-f="Específico">jul/27</div><div class="f-prova" data-f="Prova-alvo">ago/27</div><div data-f="Recuperar">set/27</div><div data-f="Específico">out/27</div><div class="f-prova" data-f="Prova-alvo">nov/27</div>
+        </div>
+      </div>
+      <p class="tl-nota">Cada atleta tem a sua temporada. As provas-alvo, os blocos de treino e os períodos de recuperação do seu ano são definidos no seu Planejamento, a partir das suas metas, da sua rotina e do seu perfil.</p>
+    </div>
+  </div>
+
+  <section class="sec" id="servicos">
+    <div class="wrap">
+      <span class="eyebrow">A base da temporada</span>
+      <h2>O resultado em prova é construído ao longo do ano, em três frentes.</h2>
+      <p class="sub">O treino é uma parte. A base que sustenta o seu próximo RP também passa por direção, por um corpo preparado para a carga e por uma saúde que aguenta o esforço. Cada frente tem um especialista, e todos trabalham olhando para o mesmo plano.</p>
+
+      <article class="bloco">
+        <img class="bloco-foto" src="/equipe-fotos/daiane.png" alt="Daiane Santos, performance mental e estratégica do Entre RPs">
+        <div class="bloco-txt">
+          <p class="pilar">Direção</p>
+          <h3>Um ano de treino com destino definido.</h3>
+          <p>Quando o calendário tem provas-alvo claras e cada bloco de treino tem um porquê, o esforço se acumula na direção certa. Você começa o ano sabendo para onde vai e chega à largada sabendo o que fazer em cada trecho da prova.</p>
+          <p class="desejo">O que você constrói: uma temporada pensada para o seu jeito de render, com metas claras e estratégia para as provas que importam.</p>
+
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Performance mental e estratégica</p>
+            <h4>Daiane Santos</h4>
+            <p>Responsável pela estratégia do atleta de ponta a ponta: escolha da prova, montagem da rotina, leitura do atleta como um todo e estratégia de prova.</p>
+            <p>O treinamento mental passa pelo perfil de personalidade. O Eneagrama entra como ferramenta de autoconhecimento aplicado: cada perfil reage de um jeito ao platô, à prova que não sai como planejado e à pressão.</p>
+            <p class="destaque">Ultra trail runner, em provas de 50 km ou mais. Fala de dentro da prova, não de fora.</p>
+          </div>
+
+          <div class="eneagrama">
+            <h4>O Eneagrama aplicado à corrida</h4>
+            <p>Dois atletas com o mesmo treino, o mesmo pace e a mesma prova chegam a resultados diferentes. Boa parte dessa diferença está no que move cada um e em como cada um reage quando o corpo pede para parar.</p>
+            <p>O Eneagrama descreve nove formas de funcionar, cada uma com a sua motivação central. Na corrida, isso aparece em comportamentos bem concretos. Alguns exemplos do que costuma surgir:</p>
+            <ul class="perfis">
+              <li><strong>Quem é movido a resultado</strong> tende a largar forte demais para mostrar ritmo e sente uma prova abaixo do esperado como fracasso pessoal.</li>
+              <li><strong>Quem busca segurança</strong> planeja tudo, mas pode travar quando a prova sai do roteiro, e costuma duvidar do próprio treino na véspera.</li>
+              <li><strong>Quem é perfeccionista</strong> cobra cada parcial e segue a planilha mesmo com dor, para não "falhar" com o plano.</li>
+              <li><strong>Quem evita desconforto e conflito</strong> segura demais, termina com sobra e fica com a sensação de que podia mais.</li>
+            </ul>
+            <p>No Planejamento, esse padrão vira estratégia: ritmo de largada, gatilhos de decisão no meio da prova, forma de lidar com o platô e um calendário montado para o seu jeito de render. Você passa a usar o seu perfil a seu favor.</p>
+          </div>
+
+          <div class="ganha">
+            <h4>O que você leva do Planejamento</h4>
+            <ul>
+              <li>Provas-alvo e provas de preparação definidas para 2027, com o porquê de cada escolha</li>
+              <li>Leitura do seu perfil e de como ele aparece no treino, na prova e no platô</li>
+              <li>Estratégia para as provas importantes: ritmo, pontos de decisão e o que fazer quando o plano muda</li>
+              <li>Pontos de atenção para a rotina, o descanso e a carga ao longo do ano</li>
+              <li>Relatório escrito para você e para os profissionais que te acompanham</li>
+            </ul>
+          </div>
+
+          <div class="como">
+            <h4>Planejamento da Temporada 2027: como funciona</h4>
+            <ol>
+              <li><strong>Entrevista (40 a 60 min).</strong> Seu histórico, suas metas, sua rotina e como você toma decisões quando a prova aperta.</li>
+              <li><strong>Leitura do perfil.</strong> Como o seu jeito de ser aparece no treino e na prova.</li>
+              <li><strong>Devolutiva (40 a 60 min).</strong> Provas-alvo e de preparação, períodos de base, pontos de atenção e estratégia para cada prova importante.</li>
+              <li><strong>Relatório escrito</strong> para você e para os profissionais que te acompanham, para que todos trabalhem na mesma direção.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> o planejamento define para onde vai cada semana de esforço, e a leitura do perfil prepara você para as decisões que nenhuma planilha toma por você no meio da prova.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bloco inverso">
+        <img class="bloco-foto" src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento, fisioterapeuta do Entre RPs">
+        <div class="bloco-txt">
+          <p class="pilar">Corpo · Prevenção</p>
+          <h3>Um corpo preparado para a carga do ano inteiro.</h3>
+          <p>Cada temporada pede mais volume, mais intensidade e mais terreno. A fisioterapia preventiva prepara articulações, músculos e o seu padrão de movimento para essa carga, antes que ela vire dor. O trabalho começa pela leitura de como você se move e segue com fortalecimento específico, ajustado ao seu planejamento.</p>
+          <p class="desejo">O que você constrói: constância de treino, com um corpo que sustenta o volume e a intensidade que a sua temporada pede.</p>
+
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Fisioterapia</p>
+            <h4>Linaldo Nascimento</h4>
+            <p class="funcao">Fisioterapeuta, quiropraxista e osteopata</p>
+            <p>A primeira formação dele é em preparação física: conhece o treino por dentro e entende a fisiologia do movimento do corredor. Trabalha em três frentes: prevenção, reabilitação e fortalecimento.</p>
+            <p>A direção dele evita a lesão e sustenta o rendimento dentro de segurança e saúde.</p>
+          </div>
+
+          <div class="como">
+            <h4>Fisioterapia para corredor, a domicílio: como funciona</h4>
+            <ol>
+              <li><strong>Atendimento no seu endereço</strong>, no horário combinado.</li>
+              <li><strong>Avaliação do movimento</strong> e do seu histórico de treino, dores e lesões.</li>
+              <li><strong>Plano preventivo</strong> com fortalecimento específico para corrida, alinhado às fases da sua temporada.</li>
+              <li><strong>Acompanhamento ao longo dos blocos de treino</strong> e reabilitação quando necessário.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> prevenir custa muito menos tempo do que tratar. Um corpo preparado mantém a constância do treino, e é a constância que transforma o plano em resultado.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bloco">
+        <img class="bloco-foto" src="/equipe-fotos/ernesto.png" alt="Ernesto Loureiro, odontologia do sono e miofuncional">
+        <div class="bloco-txt">
+          <p class="pilar">Corpo · Saúde e respiração</p>
+          <h3>Saber em que condição você está antes de pedir o máximo do corpo.</h3>
+          <p>Performance de endurance depende de respirar bem, dormir bem e de um corpo que aguenta o esforço com segurança. O exame do sono vai além da recuperação: mostra como você respira durante a noite e identifica alterações, como a apneia do sono, que prejudicam o descanso e estão associadas a riscos para o coração.</p>
+          <p class="desejo">O que você constrói: segurança para treinar e competir forte, sabendo que a sua respiração e o seu descanso sustentam o esforço.</p>
+
+          <div class="quem-box">
+            <p class="quem-tag">Quem te atende · Odontologia do sono e miofuncional</p>
+            <h4>Dr. Ernesto Loureiro</h4>
+            <p>Cuida da respiração do atleta, que sustenta performance e saúde. Respiração eficiente melhora o sono, a recuperação e o rendimento na prova.</p>
+            <p>Faz o exame do sono, para que o atleta saiba em que condição está antes de competir, e trabalha a musculatura e a função orofacial que sustentam uma respiração boa.</p>
+          </div>
+
+          <div class="como">
+            <h4>Avaliação do sono: como funciona</h4>
+            <ol>
+              <li><strong>Exame feito em casa</strong>, durante a sua noite de sono.</li>
+              <li><strong>Análise dos resultados:</strong> respiração, oxigenação e qualidade do sono ao longo da noite.</li>
+              <li><strong>Orientação</strong> sobre o tratamento indicado e encaminhamento a outros especialistas, quando necessário.</li>
+            </ol>
+            <p class="porque"><strong>Por que isso importa:</strong> competir com segurança começa pela respiração. Identificar uma alteração antes da temporada permite tratar a tempo e treinar com tranquilidade, com uma informação de saúde que todo atleta que compete deveria ter.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec pacote">
+    <div class="wrap pacote-grid">
+      <div>
+        <span class="eyebrow eyebrow-clara">Conexão · Antes da Largada</span>
+        <h2>Os três profissionais olhando para o mesmo atleta.</h2>
+        <p class="pac-txt">Quando cada especialista trabalha sozinho, você vira o mensageiro entre eles. No pacote, o que a fisioterapia encontra entra no seu planejamento, e o que o exame do sono mostra ajusta a sua carga de treino. Um plano só, com todo mundo falando a mesma língua.</p>
+        <ul>
+          <li>Planejamento da Temporada 2027</li>
+          <li>Exame do sono</li>
+          <li>Fisioterapia preventiva: avaliação e atendimento inicial a domicílio</li>
+        </ul>
+      </div>
+      <div class="total"><a class="btn btn-dourado" href="#investimento">Ver investimento</a></div>
+    </div>
+  </section>
+
+  <section class="sec invest" id="investimento">
+    <div class="wrap">
+      <span class="eyebrow">Investimento</span>
+      <h2>Escolha por onde começar.</h2>
+      <p class="sub">Atendimento no Rio de Janeiro. Pelo WhatsApp, confirmamos o seu código de parceiro, a agenda de atendimento e a forma de pagamento.</p>
+      <div class="tabela">
+        <div class="linha">
+          <div><h3>Planejamento da Temporada 2027</h3><p class="det">Direção · entrega completa: 2 sessões de 40 a 60 minutos + relatório escrito</p></div>
+          <div class="val"><span class="v">R$ 700</span><span class="cod">Condição exclusiva com código</span></div>
+          <a class="btn btn-verde" data-product="Planejamento da Temporada 2027" href="#">Quero</a>
+        </div>
+        <div class="linha">
+          <div><h3>Fisioterapia: avaliação e atendimento inicial</h3><p class="det">Corpo e prevenção · a domicílio. A continuidade do acompanhamento é definida com o fisioterapeuta a partir desse primeiro encontro.</p></div>
+          <div class="val"><span class="v">R$ 400</span></div>
+          <a class="btn btn-verde" data-product="Fisioterapia: avaliação e atendimento inicial (a domicílio)" href="#">Quero</a>
+        </div>
+        <div class="linha">
+          <div><h3>Exame do sono</h3><p class="det">Saúde e respiração · exame feito em casa. Se o resultado indicar acompanhamento ou tratamento, ele é combinado à parte.</p></div>
+          <div class="val"><span class="u">a partir de</span><span class="v">R$ 400</span></div>
+          <a class="btn btn-verde" data-product="Exame do sono" href="#">Quero</a>
+        </div>
+        <div class="linha destaque">
+          <div><h3>Antes da Largada</h3><p class="det">Conexão · Planejamento da Temporada + exame do sono + avaliação e atendimento inicial de fisioterapia, com os três profissionais alinhados sobre você</p></div>
+          <div class="val"><span class="de">R$ 1.500 separados</span><span class="v">R$ 1.290</span></div>
+          <a class="btn btn-dourado" data-product="Antes da Largada (pacote)" href="#">Quero</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="codigo">
+    <div class="wrap codigo-grid">
+      <div>
+        <span class="eyebrow">Código de parceiro</span>
+        <h2>Chegou por indicação de um parceiro?</h2>
+        <p class="sub">Assessorias e profissionais parceiros do Entre RPs têm um código exclusivo para os seus atletas e pacientes, com condição especial em todos os serviços. Peça o código a quem te indicou e informe na conversa.</p>
+      </div>
+      <form class="form" id="f" novalidate>
+        <label for="prod">Serviço</label>
+        <select id="prod">
+          <option>Planejamento da Temporada 2027</option>
+          <option>Fisioterapia: avaliação e atendimento inicial (a domicílio)</option>
+          <option>Exame do sono</option>
+          <option>Antes da Largada (pacote)</option>
+        </select>
+        <label for="cod">Código de parceiro</label>
+        <input id="cod" placeholder="EX.: FOX2027" maxlength="20" autocomplete="off">
+        <button class="btn btn-verde" type="submit">Falar no WhatsApp</button>
+        <p class="nota">O código é conferido na conversa. Sem código, fale com a gente do mesmo jeito.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <span class="eyebrow">Como comprar</span>
+      <h2>Do clique à agenda, em três passos.</h2>
+      <ol class="passos">
+        <li><strong>Escolha o serviço</strong><span>Avulso ou o Antes da Largada. Se tiver, tenha à mão o seu código de parceiro.</span></li>
+        <li><strong>Chame no WhatsApp</strong><span>A mensagem já vai pronta com o serviço escolhido e o seu código, se tiver.</span></li>
+        <li><strong>Confirme e agende</strong><span>Conferimos o seu código de parceiro, combinamos o pagamento e marcamos a data do atendimento.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec final">
+    <div class="wrap">
+      <h2>A evolução não acontece no RP. Acontece entre eles.</h2>
+      <p>Comece a temporada 2027 com o corpo, a cabeça e o plano no mesmo lugar.</p>
+      <div class="ctas"><a class="btn btn-dourado" data-product="Temporada 2027" href="#">Falar no WhatsApp</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-logo">ENTRE<span>·</span>RPs</div>
+    <div class="foot-meta">contato@entrerps.com.br · @entrerps · <span id="wnum"></span></div>
+  </div>
+</footer>
+
+<script>
+  var WHATS = "5521965919904";
+  document.getElementById("wnum").textContent = "WhatsApp (21) 96591-9904";
+  function link(product, code){
+    var msg = "Olá! Quero saber mais sobre: " + product + ".";
+    if (code) msg += " Código de parceiro: " + code + ".";
+    return "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(msg);
+  }
+  document.querySelectorAll("[data-product]").forEach(function(a){
+    a.href = link(a.getAttribute("data-product"));
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  var f = document.getElementById("f");
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var code = document.getElementById("cod").value.trim().toUpperCase();
+    var a = document.createElement("a");
+    a.href = link(document.getElementById("prod").value, code); a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+</script>
+
+</body>
+</html>
