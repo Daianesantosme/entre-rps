@@ -116,6 +116,12 @@ h2{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem
 .linha .de{font-family:var(--f-mono);font-size:.8rem;color:var(--texto-claro);text-decoration:line-through}
 .linha.destaque{background:var(--areia);padding-left:1rem;padding-right:1rem;margin-top:.6rem;border:1px solid var(--dourado)}
 @media (max-width:640px){.linha{grid-template-columns:1fr auto}.linha .btn{grid-column:1/-1}.linha .val{justify-items:start}}
+.prof{display:grid;grid-template-columns:96px 1fr;gap:1rem;align-items:start;margin-bottom:1.1rem}
+.prof img{width:96px;aspect-ratio:4/5;object-fit:cover;object-position:top center;border-radius:2px;background:var(--areia)}
+.prof-label{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-claro)}
+.prof-nome{font-family:var(--f-titulo);font-weight:800;font-size:1.1rem;color:var(--texto-escuro);margin-top:.1rem}
+.prof .quem{margin-top:.15rem}
+.bio{color:var(--texto-medio);font-size:.93rem;margin-top:.4rem;max-width:54ch}
 /* pacote */
 .pacote{background:var(--verde-profundo);color:var(--branco)}
 .pacote h2{color:var(--branco)}
@@ -222,8 +228,8 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
             <p class="desc">O calendário foi montado pelo que todo mundo está correndo. A prova-alvo foi escolhida no impulso. Cada semana tem um treino, mas o ano não tem um plano. E quando a largada chega, você descobre no meio da prova o que deveria ter decidido em janeiro.</p>
             <p class="desejo">O que muda: você chega à prova-alvo no auge, sabendo onde acelerar, onde segurar e por que está treinando cada semana.</p>
             <div class="servico">
+              <div class="prof"><img src="/equipe-fotos/daiane.png" alt="Daiane Santos"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Daiane Santos</p><p class="quem">Performance mental e estratégica</p><p class="bio">Especialista em Eneagrama e performance mental, com mais de 15 anos em liderança e estratégia. Corre trail e conhece por dentro a diferença entre treinar muito e treinar com direção.</p></div></div>
               <h4>Planejamento da Temporada 2027</h4>
-              <p class="quem">Daiane Santos · Performance mental e estratégica</p>
               <ul>
                 <li>Duas sessões de 40 a 60 minutos: entrevista e devolutiva</li>
                 <li>Leitura do seu perfil comportamental e de como ele pesa na prova</li>
@@ -241,8 +247,8 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
             <p class="desc">Aquele incômodo no joelho, na canela ou no quadril que some no aquecimento e volta depois do longão. Você segue treinando com medo de parar e perder o ciclo. A maioria dos corredores só procura um fisioterapeuta depois que a lesão já tirou semanas de treino.</p>
             <p class="desejo">O que muda: você treina sem medo, entende o que o seu corpo está pedindo e chega inteiro à largada.</p>
             <div class="servico">
+              <div class="prof"><img src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Linaldo Nascimento</p><p class="quem">Fisioterapeuta</p><p class="bio">Foco em prevenção e reabilitação para corredores. Mantém o atleta em movimento com segurança.</p></div></div>
               <h4>Fisioterapia para corredor, a domicílio</h4>
-              <p class="quem">Linaldo Nascimento · Fisioterapeuta</p>
               <ul>
                 <li>Atendimento no seu endereço, no seu horário</li>
                 <li>Prevenção, tratamento e retorno à corrida depois de lesão</li>
@@ -259,8 +265,8 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
             <p class="desc">A planilha está em dia, mas o treino rende menos do que deveria. O cansaço se acumula de uma semana para a outra, e talvez alguém já tenha comentado que você ronca. A adaptação ao treino acontece enquanto você dorme. Quando o sono falha, parte do treino se perde.</p>
             <p class="desejo">O que muda: você acorda recuperado e passa a aproveitar o treino que já faz.</p>
             <div class="servico">
+              <div class="prof"><img src="/equipe-fotos/ernesto.png" alt="Dr. Ernesto Loureiro"><div><p class="prof-label">Quem te atende</p><p class="prof-nome">Dr. Ernesto Loureiro</p><p class="quem">Odontologia do sono</p><p class="bio">Especialista em odontologia do sono e reabilitação miofuncional. Atua na qualidade da respiração, na recuperação e no descanso.</p></div></div>
               <h4>Avaliação do sono</h4>
-              <p class="quem">Dr. Ernesto Loureiro · Odontologia do sono</p>
               <ul>
                 <li>Exame feito em casa, durante a sua noite de sono</li>
                 <li>Análise da respiração e da qualidade do descanso</li>
@@ -286,18 +292,6 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
         </ul>
       </div>
       <div class="total"><a class="btn btn-dourado" href="#investimento">Ver investimento</a></div>
-    </div>
-  </section>
-
-  <section class="sec equipe">
-    <div class="wrap">
-      <span class="eyebrow">Quem conduz</span>
-      <h2>Três especialistas, um plano só.</h2>
-      <div class="equipe-grid">
-        <div class="pessoa"><img src="/equipe-fotos/daiane.png" alt="Daiane Santos"><h3>Daiane Santos</h3><p class="quem">Performance mental e estratégica</p><p>Especialista em Eneagrama e performance mental, com mais de 15 anos em liderança e estratégia. Corre trail.</p></div>
-        <div class="pessoa"><img src="/equipe-fotos/linaldo.png" alt="Linaldo Nascimento"><h3>Linaldo Nascimento</h3><p class="quem">Fisioterapia</p><p>Foco em prevenção e reabilitação para corredores. Mantém o atleta em movimento com segurança.</p></div>
-        <div class="pessoa"><img src="/equipe-fotos/ernesto.png" alt="Ernesto Loureiro"><h3>Ernesto Loureiro</h3><p class="quem">Odontologia do sono</p><p>Especialista em odontologia do sono e reabilitação miofuncional. Atua na respiração, na recuperação e no descanso.</p></div>
-      </div>
     </div>
   </section>
 
