@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;700&display=swap">
 <style>
-/* Layout: segue o site entrerps.com.br — hero vermelho-terra, régua da temporada, serviços em fichas, pacote em verde profundo, código da assessoria, equipe, CTA final. Paleta e fontes oficiais do site; tema único (claro), como o site. */
+/* Layout: segue o site entrerps.com.br — hero vermelho-terra, régua da temporada, serviços em fichas, pacote em verde profundo, código de parceiro, equipe, CTA final. Paleta e fontes oficiais do site; tema único (claro), como o site. */
 :root{
   --verde-entre:#2C7351;
   --verde-profundo:#0C361E;
@@ -232,7 +232,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
       <p class="lead">Corpo preparado, cabeça no lugar e um plano para o ano inteiro. Escolha o que você precisa agora: planejamento da temporada, fisioterapia para corredor ou avaliação do sono.</p>
       <div class="ctas">
         <a class="btn btn-dourado" href="#servicos">Ver serviços</a>
-        <a class="btn btn-outline-branco" href="#codigo">Tenho código da assessoria</a>
+        <a class="btn btn-outline-branco" href="#codigo">Tenho código de parceiro</a>
       </div>
     </div>
   </section>
@@ -392,7 +392,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
     <div class="wrap">
       <span class="eyebrow">Investimento</span>
       <h2>Escolha por onde começar.</h2>
-      <p class="sub">Atendimento no Rio de Janeiro. Pelo WhatsApp, confirmamos a sua assessoria parceira, a agenda de atendimento e a forma de pagamento.</p>
+      <p class="sub">Atendimento no Rio de Janeiro. Pelo WhatsApp, confirmamos o seu código de parceiro, a agenda de atendimento e a forma de pagamento.</p>
       <div class="tabela">
         <div class="linha">
           <div><h3>Planejamento da Temporada 2027</h3><p class="det">Direção · 2 sessões de 40 a 60 minutos + relatório escrito</p></div>
@@ -421,9 +421,9 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
   <section class="sec" id="codigo">
     <div class="wrap codigo-grid">
       <div>
-        <span class="eyebrow">Assessorias parceiras</span>
-        <h2>Treina em assessoria parceira?</h2>
-        <p class="sub">Atletas de assessorias parceiras têm condição exclusiva em todos os serviços. Peça o código ao seu treinador e informe na conversa.</p>
+        <span class="eyebrow">Código de parceiro</span>
+        <h2>Chegou por indicação de um parceiro?</h2>
+        <p class="sub">Assessorias e profissionais parceiros do Entre RPs têm um código exclusivo para os seus atletas e pacientes, com condição especial em todos os serviços. Peça o código a quem te indicou e informe na conversa.</p>
       </div>
       <form class="form" id="f" novalidate>
         <label for="prod">Serviço</label>
@@ -433,7 +433,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
           <option>Avaliação do sono</option>
           <option>Pacote Temporada 2027</option>
         </select>
-        <label for="cod">Código da assessoria</label>
+        <label for="cod">Código de parceiro</label>
         <input id="cod" placeholder="EX.: FOX2027" maxlength="20" autocomplete="off">
         <button class="btn btn-verde" type="submit">Falar no WhatsApp</button>
         <p class="nota">O código é conferido na conversa. Sem código, fale com a gente do mesmo jeito.</p>
@@ -446,9 +446,9 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
       <span class="eyebrow">Como comprar</span>
       <h2>Do clique à agenda, em três passos.</h2>
       <ol class="passos">
-        <li><strong>Escolha o serviço</strong><span>Avulso ou o pacote. Se tiver, tenha à mão o código da sua assessoria.</span></li>
+        <li><strong>Escolha o serviço</strong><span>Avulso ou o pacote. Se tiver, tenha à mão o seu código de parceiro.</span></li>
         <li><strong>Chame no WhatsApp</strong><span>A mensagem já vai pronta com o serviço escolhido e o seu código, se tiver.</span></li>
-        <li><strong>Confirme e agende</strong><span>Conferimos a sua assessoria parceira, combinamos o pagamento e marcamos a data do atendimento.</span></li>
+        <li><strong>Confirme e agende</strong><span>Conferimos o seu código de parceiro, combinamos o pagamento e marcamos a data do atendimento.</span></li>
       </ol>
     </div>
   </section>
@@ -474,7 +474,7 @@ footer{background:var(--verde-profundo);padding-block:2.2rem}
   document.getElementById("wnum").textContent = "WhatsApp (21) 96591-9904";
   function link(product, code){
     var msg = "Olá! Quero saber mais sobre: " + product + ".";
-    if (code) msg += " Código da assessoria: " + code + ".";
+    if (code) msg += " Código de parceiro: " + code + ".";
     return "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(msg);
   }
   document.querySelectorAll("[data-product]").forEach(function(a){
