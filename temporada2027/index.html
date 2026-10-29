@@ -113,6 +113,7 @@ h2{font-family:var(--f-titulo);font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem
 .linha .v{font-family:var(--f-mono);font-weight:700;font-size:1.5rem;color:var(--verde-profundo);font-variant-numeric:tabular-nums}
 .linha .u{font-size:.8rem;color:var(--texto-claro)}
 .linha .cod{font-family:var(--f-mono);font-size:.72rem;font-weight:700;background:var(--areia);color:var(--dourado-texto);padding:.2rem .5rem;border-radius:2px}
+.cod-nota{display:inline-block;margin-top:.9rem;font-family:var(--f-mono);font-size:.8rem;font-weight:700;letter-spacing:.02em;background:var(--areia);color:var(--dourado-texto);padding:.4rem .75rem;border-radius:2px}
 .linha .de{font-family:var(--f-mono);font-size:.8rem;color:var(--texto-claro);text-decoration:line-through}
 .linha.destaque{background:var(--areia);padding-left:1rem;padding-right:1rem;margin-top:.6rem;border:1px solid var(--dourado)}
 @media (max-width:640px){.linha{grid-template-columns:1fr auto}.linha .btn{grid-column:1/-1}.linha .val{justify-items:start}}
@@ -327,6 +328,7 @@ footer{background:var(--branco);border-top:1px solid var(--linha);padding-block:
             <h4>Linaldo Nascimento</h4>
             <p class="funcao">Fisioterapeuta, quiropraxista e osteopata</p>
             <p>A primeira formação dele é em preparação física: conhece o treino por dentro e entende a fisiologia do movimento do corredor. Trabalha em três frentes: prevenção, reabilitação e fortalecimento.</p>
+            <p>Além de corredores, atende atletas de CrossFit e HYROX, que somam carga de força e de corrida na mesma semana.</p>
             <p>A direção dele evita a lesão e sustenta o rendimento dentro de segurança e saúde.</p>
           </div>
 
@@ -393,10 +395,11 @@ footer{background:var(--branco);border-top:1px solid var(--linha);padding-block:
       <span class="eyebrow">Investimento</span>
       <h2>Escolha por onde começar.</h2>
       <p class="sub">Atendimento no Rio de Janeiro. Pelo WhatsApp, confirmamos o seu código de parceiro, a agenda de atendimento e a forma de pagamento.</p>
+      <p class="cod-nota">Com código de parceiro: 5% de desconto em qualquer serviço e no pacote</p>
       <div class="tabela">
         <div class="linha">
           <div><h3>Planejamento da Temporada 2027</h3><p class="det">Direção · entrega completa: 2 sessões de 40 a 60 minutos + relatório escrito</p></div>
-          <div class="val"><span class="v">R$ 700</span><span class="cod">Condição exclusiva com código</span></div>
+          <div class="val"><span class="v">R$ 700</span></div>
           <a class="btn btn-verde" data-product="Planejamento da Temporada 2027" href="#">Quero</a>
         </div>
         <div class="linha">
@@ -423,7 +426,7 @@ footer{background:var(--branco);border-top:1px solid var(--linha);padding-block:
       <div>
         <span class="eyebrow">Código de parceiro</span>
         <h2>Chegou por indicação de um parceiro?</h2>
-        <p class="sub">Assessorias e profissionais parceiros do Entre RPs têm um código exclusivo para os seus atletas e pacientes, com condição especial em todos os serviços. Peça o código a quem te indicou e informe na conversa.</p>
+        <p class="sub">Assessorias de corrida, boxes de CrossFit e HYROX e profissionais parceiros do Entre RPs têm um código exclusivo para os seus atletas, alunos e pacientes, com 5% de desconto em qualquer serviço e no pacote. Peça o código a quem te indicou e informe na conversa.</p>
       </div>
       <form class="form" id="f" novalidate>
         <label for="prod">Serviço</label>
